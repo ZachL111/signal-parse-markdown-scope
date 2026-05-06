@@ -1,0 +1,32 @@
+{
+  "index": 442,
+  "phase": 2,
+  "batch": 50,
+  "name": "signal-parse-markdown-scope",
+  "planned_name": "signal-parse-markdown-scope",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for markdown security rule linting, using safe and unsafe fixtures and remediation hints.",
+  "repository_url": "https://github.com/ZachL111/signal-parse-markdown-scope",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 163,
+    "risk_penalty": 4,
+    "latency_penalty": 2,
+    "weight_bonus": 6,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
