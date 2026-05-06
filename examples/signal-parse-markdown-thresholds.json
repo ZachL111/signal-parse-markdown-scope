@@ -1,0 +1,17 @@
+{
+  "repo": "signal-parse-markdown-scope",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 157,
+    "watch": 95
+  },
+  "terms": [
+    "token drift",
+    "grammar width",
+    "label quality",
+    "error locality"
+  ]
+}

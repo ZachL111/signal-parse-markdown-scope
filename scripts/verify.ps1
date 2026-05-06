@@ -63,3 +63,9 @@ ruby -Ilib tests/test_policy.rb
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-signal-parse-markdown-detail.ps1
 
 ruby -Ilib tests/test_domain_review.rb
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-signal-parse-markdown-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-signal-parse-markdown-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
