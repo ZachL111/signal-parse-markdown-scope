@@ -1,0 +1,73 @@
+{
+  "repo": "signal-parse-markdown-scope",
+  "language": "Ruby",
+  "category": "Parsers",
+  "goal": "Implement a Ruby parsers project for markdown security rule linting, using safe and unsafe fixtures and remediation hints.",
+  "review_model": {
+    "terms": [
+      "token drift",
+      "grammar width",
+      "label quality",
+      "error locality"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "token drift",
+      "signal": 66,
+      "slack": 47,
+      "drag": 14,
+      "confidence": 63,
+      "score": 200,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "grammar width",
+      "signal": 66,
+      "slack": 39,
+      "drag": 19,
+      "confidence": 87,
+      "score": 201,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "label quality",
+      "signal": 84,
+      "slack": 45,
+      "drag": 18,
+      "confidence": 55,
+      "score": 214,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "error locality",
+      "signal": 69,
+      "slack": 43,
+      "drag": 11,
+      "confidence": 72,
+      "score": 220,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "token drift",
+      "signal": 54,
+      "slack": 36,
+      "drag": 8,
+      "confidence": 51,
+      "score": 171,
+      "lane": "ship"
+    }
+  ]
+}
